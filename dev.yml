@@ -1,0 +1,33 @@
+version: '2.2'
+services:
+  mysql:
+    extends:
+      file: mysql.yml
+      service: mysql
+  rabbitmq:
+    extends:
+      file: rabbitmq.yml
+      service: rabbitmq
+  redis:
+    extends:
+      file: redis.yml
+      service: redis
+  es:
+    extends:
+      file: elasticsearch.yml
+      service: es
+  kibana:
+    extends:
+      file: elasticsearch.yml
+      service: kibana
+  kafka:
+    extends:
+      file: kafka.yml
+      service: kafka
+    environment:
+      - KAFKA_ADVERTISED_HOST_NAME=kafka
+      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092
+  zookeeper:
+    extends:
+      file: kafka.yml
+      service: zookeeper

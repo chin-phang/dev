@@ -31,3 +31,11 @@ services:
     extends:
       file: kafka.yml
       service: zookeeper
+  hazelcast:
+    extends:
+      file: hazelcast.yml
+      service: hazelcast
+  hazelcast-management-center:
+    extends:
+      file: hazelcast.yml
+      service: hazelcast-management-center

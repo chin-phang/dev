@@ -21,9 +21,9 @@ services:
       ELASTICSEARCH_HOSTS: http://es:9200
   logstash:
     image: docker.elastic.co/logstash/logstash:6.8.9
-    volumes:
-      # - ./logstash/logstash.yml:/usr/share/logstash/config/logstash.yml
-      # - ./logstash/pipeline/:/usr/share/logstash/pipeline/
+    # volumes:
+    #   - ./logstash/logstash.yml:/usr/share/logstash/config/logstash.yml
+    #   - ./logstash/pipeline/:/usr/share/logstash/pipeline/
     environment:
       ELASTICSEARCH_HOST: es
       ELASTICSEARCH_PORT: 9200

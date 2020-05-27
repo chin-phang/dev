@@ -1,4 +1,7 @@
+http.host: "0.0.0.0"
+xpack.monitoring.elasticsearch.hosts: [ "${ELASTICSEARCH_HOSTS}" ]
+
 pipeline:
   batch:
-    size: ${BATCH_SIZE}
-    delay: ${BATCH_DELAY}
+    size: "${BATCH_SIZE:125}"
+    delay: "${BATCH_DELAY:5}"

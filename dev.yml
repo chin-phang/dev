@@ -12,14 +12,26 @@ services:
     extends:
       file: redis.yml
       service: redis
-  es:
+  es01:
     extends:
       file: elasticsearch.yml
-      service: es
+      service: es01
+  es02:
+    extends:
+      file: elasticsearch.yml
+      service: es02
+  es03:
+    extends:
+      file: elasticsearch.yml
+      service: es03
   kibana:
     extends:
       file: elasticsearch.yml
       service: kibana
+  logstash:
+    extends:
+      file: elasticsearch.yml
+      service: logstash
   kafka:
     extends:
       file: kafka.yml
